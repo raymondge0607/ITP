@@ -1,0 +1,3 @@
+# Pyramid Documentation
+- In crafting the pyramid program, I first started up by setting up a for loop. I considered utilizing nested loops for the spaces and hashes but then I settled on just one single loop iterating the height of the pyramid. This can be seen in the line 'for i in range(1, stacks + 1):' where i represents the current row number.
+- In order to properly achieve the shape of the pyramid, I tried using string multiplaction as seen in the line 'print(" " * (stacks - i) + "#" * i)'. I found out that I was able to decrease the number of spaces and increase the amount of hashes for each row.
