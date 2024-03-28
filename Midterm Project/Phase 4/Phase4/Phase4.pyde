@@ -1,6 +1,6 @@
 def setup():
-    size(1000, 1000)
-
+    size(800, 800)
+    
 def drawObject(x, y, s):
     push()
     translate(x, y)
@@ -14,18 +14,17 @@ def drawObject(x, y, s):
 
 def draw():
     background(255)
-    gridSize = 3
+    gridSize = 20
 
     cellWidth = width / gridSize
     cellHeight = height / gridSize
 
-    minScaleFactor = 0
-    maxScaleFactor = min(cellWidth / (84 - gridSize * 0.1), cellHeight / (84 - gridSize * 0.1))
-    
     for i in range(gridSize):
         for j in range(gridSize):
             x = i * cellWidth
             y = j * cellHeight
 
-            scaleFactor = max(minScaleFactor, maxScaleFactor)
+            scaleFactor = min(cellWidth / (90 - gridSize * 0.2), cellHeight / (90 - gridSize * 0.2))
             drawObject(x, y, scaleFactor)
+            
+    

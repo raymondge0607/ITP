@@ -15,4 +15,4 @@ def drawObject(x, y, s):
 def draw():
     background(255)
     drawObject(0, 0, 1)
-    drawObject(50, 50, 2)
+    drawObject(100, 100, 2)
