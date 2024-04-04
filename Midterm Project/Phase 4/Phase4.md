@@ -34,7 +34,7 @@ The first two lines initiate the nested for loop to iterate over each row and co
 
 - As my shape is more of a "logo" than a symbol and required outlines instead of filled shapes, I believe that to maximize the size of my shape to the edges of it's respective cell would mean that the outline edge would either overlap or disappear. I knew that there had to be a least a little bit of space in between the cells so that the outline would show. Thus, I derived the following code:
 
-              maxScaleFactor = min(cellWidth / (85 - gridSize * 0.1), cellHeight / (85 - gridSize * 0.1))
+              maxScaleFactor = min(cellWidth / (90 - gridSize * 0.2), cellHeight / (90 - gridSize * 0.2))
 
 The scaleFactor is derived by dividng the cell width and cell height by a value that adjusts accordingly to the grid value chosen. After a lot of trial and error, I landed on the equation "85 - gridSize * 0.1". 85 represents a constant that correponds to the padding between shapes within the grid cell that I determined simply by testing different grid size values and the results produced in processing. 0.1 is the derived scaling factor that adjusts the maximum allowable scale based on the gridSize value. multiplying the gridSize value (in this case 0.1) reduces the maximum allowable scale as the gridSize value increases to make sure that the shapes don't become too large. This line determines the appropriate scale factor to use for drawing the object within the current cell. It selects the maximum of the minimum scale factor and the maximum scale factor calculated earlier.
 

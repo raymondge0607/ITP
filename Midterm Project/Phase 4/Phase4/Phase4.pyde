@@ -14,7 +14,7 @@ def drawObject(x, y, s):
 
 def draw():
     background(255)
-    gridSize = 20
+    gridSize = 15
 
     cellWidth = width / gridSize
     cellHeight = height / gridSize
